@@ -51,7 +51,7 @@ We can fix this using two method
 ![Image](https://github.com/user-attachments/assets/9113ed8a-1426-4f0e-9715-59b0d366e9f3)
 
 
-1. Explain how the Spring IoC container works behind the scenes when your application starts
+3\. Explain how the Spring IoC container works behind the scenes when your application starts
 
    The IoC container is responsible for:
 
@@ -60,7 +60,7 @@ We can fix this using two method
 - Injecting dependencies (DI)
 - Wiring the beans together
 
-1\. **Application Starts**
+**1. **Application Starts**
 
 - Spring Boot initializes the application context (ApplicationContext).
 - @SpringBootApplication triggers component scanning, auto-configuration, and bean registration.
@@ -94,6 +94,7 @@ We can fix this using two method
 
 - Once dependencies are injected and lifecycle callbacks are complete, the bean is ready.
 - You can use it in your application via auto-wiring or ApplicationContext.getBean().
+
 
 4\. You have a service class with multiple dependencies. Which injection method would you prefer (constructor, field, setter) and why?
 
@@ -136,6 +137,7 @@ Marks the class as a **web controller** (MVC controller).
 
 Used with @RequestMapping or @GetMapping to serve web responses.
 
+
 6\. Write a small Spring Boot configuration class that defines a custom bean of type RestTemplate using @Bean.
 
 A **helper class** that allows you to **send and receive data** (JSON, XML, plain text, etc.) to and from remote RESTful services **easily**.
@@ -149,6 +151,8 @@ A **helper class** that allows you to **send and receive data** (JSON, XML, plai
 @Bean: Registers the method's return value (RestTemplate) as a Spring bean.
 
 This makes RestTemplate available for @Autowired anywhere in the app.
+
+
 
 7\. What would happen if you forget to annotate your custom service class with @Component or any stereotype annotation?
 
@@ -169,6 +173,8 @@ Missing @Service annotation
 And trying to autowire, but it will generate an Error because bean is not created because , without annotation Framework wasn’t able to find and create one.
 
 ![Image](https://github.com/user-attachments/assets/eb528e7b-2b74-4aeb-9d48-80853fd5b389)
+
+
 
 8\. In application.properties, you define app.env=dev. How can you use this to conditionally load a bean only in dev environment?
 
@@ -193,6 +199,8 @@ To define **environment-specific beans** like:
 ![Image](https://github.com/user-attachments/assets/fbd229d5-9f43-46a7-b3fe-ca3ef186c6ee)
 
 If you change app.env=prod, the DevDataService won't load — and ProdDataService will.
+
+
 
 9\. What’s the difference between @ComponentScan and @EnableAutoConfiguration in Spring Boot?
 
