@@ -12,4 +12,7 @@ public interface EmployeeService {
     Employee updateEmployee(Long id, Employee updatedEmployee);
     void softDeleteEmployee(Long id);
     List<Employee> getEmployeeListByDepartment(String department);
+
+    List<Employee> searchEmployeesByName(String name);
+    List<Employee> getEmployeesWithSalaryGreaterThan(Double salary);
 }

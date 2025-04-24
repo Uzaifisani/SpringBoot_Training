@@ -61,4 +61,14 @@ public class EmployeeServiceImpl implements EmployeeService {
     public List<Employee> getEmployeeListByDepartment(String department) {
         return  employeeRepository.findByDepartmentAndIsDeletedFalse(department);
     }
+
+    @Override
+    public List<Employee> searchEmployeesByName(String name) {
+        return employeeRepository.searchByName(name);
+    }
+
+    @Override
+    public List<Employee> getEmployeesWithSalaryGreaterThan(Double salary) {
+        return employeeRepository.findBySalaryGreaterThan(salary);
+    }
 }

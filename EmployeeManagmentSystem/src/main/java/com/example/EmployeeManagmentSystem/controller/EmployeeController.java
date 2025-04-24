@@ -53,4 +53,15 @@ public class EmployeeController {
     public ResponseEntity<List<Employee>> getEmployeesByDepartment(@PathVariable String department) {
         return ResponseEntity.ok(employeeService.getEmployeeListByDepartment(department));
     }
+
+    @GetMapping("/search")
+    public ResponseEntity<List<Employee>> searchEmployeesByName(@RequestParam String name) {
+        return ResponseEntity.ok(employeeService.searchEmployeesByName(name));
+    }
+
+    @GetMapping("/salary-greater-than")
+    public ResponseEntity<List<Employee>> getEmployeesWithHighSalary(@RequestParam Double amount) {
+        return ResponseEntity.ok(employeeService.getEmployeesWithSalaryGreaterThan(amount));
+    }
+
 }

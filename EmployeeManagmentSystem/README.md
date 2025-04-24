@@ -1,4 +1,12 @@
-# Assignment Outputs
+# Assignment Outputs (Updated)
+
+### Search By Employee Name (Partial Match)
+
+![img_6.png](img_6.png)
+
+###  Get employees with salary greater than a certain amount
+
+![img_7.png](img_7.png)
 
 ### Add Employee
 
